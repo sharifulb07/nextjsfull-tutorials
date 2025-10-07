@@ -1,9 +1,9 @@
 export default async function DetailsPage({
   params,
 }: {
-  params: { productId: string };
+  params: Promise<{productId:string}>
 }) {
-  const { productId } = params;
+  const { productId } = await params;
 
   return (
     <div>

@@ -1,3 +1,6 @@
 ## All Nextjs Latest Features tutorials for full stack web development 
 # routings concepts
+# dynamic route
+# nested dynamic route here 
+
 
