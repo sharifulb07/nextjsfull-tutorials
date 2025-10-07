@@ -3,5 +3,8 @@
 # dynamic route
 # nested dynamic route here 
 # catch all segments in dynamic route 
+# dynamic metadata
+
+
 
 
