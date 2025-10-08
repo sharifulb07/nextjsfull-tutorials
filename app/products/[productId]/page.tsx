@@ -1,22 +1,23 @@
+import { Metadata } from "next";
 
-import { notFound } from "next/navigation";
+type Props = {
+  params: Promise<{ productId: string }>;
+};
 
+export const generateMetadata = async ({ params }: Props):Promise<Metadata> => {
+  const id = (await params).productId;
 
+  return {
+    title: `Product ${id}`,
+  };
+};
 
-export default async function DetailsPage({
-  params,
-}: {
-  params: Promise<{productId:string}>
-}) {
-  const { productId } = await params;
-  // if(parseInt(productId)<10){
-  //   notFound();
-
-  // }
+export default async function ProductDetails({ params }: Props) {
+  const id = (await params).productId;
 
   return (
     <div>
-      <h1>Details of product number {productId}</h1>
+      <h2>Details about product {id}</h2>
     </div>
   );
 }
