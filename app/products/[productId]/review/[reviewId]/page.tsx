@@ -1,6 +1,14 @@
-export default async function ReviewPage(
-    {params}:{params:Promise<{productId:string, reviewId:string}>}
-){
-    const {productId, reviewId}=await params;
-    return <h1>Product No {productId} has review number {reviewId} </h1>
+export default async function ReviewPage({
+  params,
+}: {
+  params: Promise<{ productId: string; reviewId: string }>;
+}) {
+  const { productId, reviewId } = await params;
+  if (parseInt(reviewId) < 100) {
+    return (
+      <h1>
+        Product No {productId} has review number {reviewId}{" "}
+      </h1>
+    );
+  }
 }
