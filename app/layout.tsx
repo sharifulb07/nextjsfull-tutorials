@@ -8,11 +8,14 @@ const poppins = Poppins({
 });
 
 const metadata: Metadata = {
-  title: "My Nextjs  Journey",
+  title: {
+    default: "This tutorial --- sharif dev",
+    template: "%s | code area",
+  },
   description: "This is my first Nextjs project",
 };
 
-export default function Rootlayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
