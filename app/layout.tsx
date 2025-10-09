@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head></head>
-      <body className={"container"}>
+      <body className={"container text-amber-400"}>
         <div className="wrapper">{children}</div>
       </body>
     </html>
