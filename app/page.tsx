@@ -1,13 +1,7 @@
-import Link from "next/link"
-
-
-export default async function Home() {
-
-
-  return (
+export default function Home(){
+  return(
     <div>
-     <h1>hello world </h1>
-      
+      Home Page 
     </div>
   )
 }
