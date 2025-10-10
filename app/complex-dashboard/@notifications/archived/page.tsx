@@ -1,0 +1,12 @@
+import Card from "@/components/Card";
+import Link from "next/link";
+
+export default async function ArchivedNotifications() {
+  return <Card>
+    <div>
+Archived 
+    Notifications
+    </div>
+<div><Link href={'/complex-dashboard/'}>Notifications</Link></div>
+  </Card>;
+}
