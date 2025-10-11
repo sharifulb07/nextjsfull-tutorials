@@ -1,6 +1,7 @@
 import { type NextRequest } from "next/server";
 
 import { headers, cookies } from "next/headers";
+import { redirect } from "next/navigation";
 
 export async function GET(req:NextRequest){
     // const customHeaders=new Headers(req.headers);
@@ -11,6 +12,8 @@ export async function GET(req:NextRequest){
     const cookieStore=await cookies();
     cookieStore.set("RequestPerRate", "150")
     console.log(cookieStore.get("RequestPerRate"))
+    redirect("/blog")
+
 return new Response("<h1>Profile Api Data</h1>",{
     headers:{
         "Content-Type":"text/html",
